@@ -29,18 +29,18 @@ class ViewController: UIViewController {
 	
 	
 	// MARK: - Function
-	func setupTextField() {
+	private func setupTextField() {
 		self.nameTextField.delegate = self
 		self.nameTextField.placeholder = "Digite seu nome"
 		self.nameTextField.autocorrectionType = .no
 		self.nameTextField.autocapitalizationType = .words
 	}
 	
-	func setupButton() {
+	private func setupButton() {
 //		self.sortButton.isEnabled = false
 	}
 	
-	func setupTableView() {
+	private func setupTableView() {
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
 		self.tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: UserCell.identifier)
