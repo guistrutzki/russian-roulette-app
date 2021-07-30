@@ -25,6 +25,7 @@ class ViewController: UIViewController {
 		self.setupTextField()
 		self.setupButton()
 		self.setupTableView()
+		self.setupTabBar()
 	}
 	
 	
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
 	}
 	
 	private func setupButton() {
-//		self.sortButton.isEnabled = false
+		// TODO: Regra para habilitar e desabilitar
 	}
 	
 	private func setupTableView() {
@@ -50,6 +51,10 @@ class ViewController: UIViewController {
 		let footerView = UIView()
 		footerView.backgroundColor = .black
 		self.tableView.tableFooterView = footerView
+	}
+	
+	private func setupTabBar() {
+		tabBarController?.tabBar.barTintColor = .black
 	}
 	
 	
@@ -69,6 +74,7 @@ extension ViewController: UITextFieldDelegate {
 		guard let nameUser = textField.text else { return true }
 		self.nameTextField.text = nil
 		controller.addUser(nameUser)
+		setupButton()
 		tableView.reloadData()
 		
 		return true

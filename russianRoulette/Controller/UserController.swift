@@ -34,4 +34,12 @@ class UserController {
 		return users.isEmpty
 	}
 	
+	func enableButton() -> (Bool, Float) {
+		if users.isEmpty || users.count == 1 {
+			return (false, 0.5)
+		} else {
+			return (true, 1.0)
+		}
+	}
+	
 }
