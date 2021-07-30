@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="190" id="KGk-i7-Jjw" customClass="RouletteCell" customModule="russianRoulette" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="190"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roleta" translatesAutoresizingMaskIntoConstraints="NO" id="49J-gP-JXW">
+                        <rect key="frame" x="129.5" y="5" width="90" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="UnK-MY-jt9"/>
+                            <constraint firstAttribute="width" constant="90" id="tgv-sj-ilt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insira os participantes para iniciar uma roleta russa ;)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXf-OE-Azz">
+                        <rect key="frame" x="40" y="125" width="269" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="49J-gP-JXW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="67s-td-PTQ"/>
+                    <constraint firstItem="49J-gP-JXW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="JK2-yl-WJ0"/>
+                    <constraint firstItem="BXf-OE-Azz" firstAttribute="top" secondItem="49J-gP-JXW" secondAttribute="bottom" constant="20" id="JRO-2y-i6z"/>
+                    <constraint firstAttribute="trailing" secondItem="BXf-OE-Azz" secondAttribute="trailing" constant="40" id="R9f-Rz-zsW"/>
+                    <constraint firstItem="BXf-OE-Azz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="fZQ-Nz-uik"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="58.695652173913047" y="173.4375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="roleta" width="512" height="512"/>
+    </resources>
+</document>
