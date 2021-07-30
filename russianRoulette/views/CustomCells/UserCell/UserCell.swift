@@ -8,20 +8,19 @@
 import UIKit
 
 class UserCell: UITableViewCell {
-
-    @IBOutlet weak var avatarImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    static let identifier = "UserCell"
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
-    func setupCell(image: String, name: String) {
-        nameLabel.text = name
-        avatarImage.image = UIImage(named: image)
-    }
-
+	
+	@IBOutlet weak var avatarImage: UIImageView!
+	@IBOutlet weak var nameLabel: UILabel!
+	
+	static let identifier = "UserCell"
+	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+	}
+	
+	func setupCell(image: String, name: String) {
+		self.avatarImage.image = UIImage(named: image)
+		self.nameLabel.text = name
+	}
+	
 }
