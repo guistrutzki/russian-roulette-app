@@ -38,7 +38,9 @@ class ViewController: UIViewController {
 	}
 	
 	private func setupButton() {
-		// TODO: Regra para habilitar e desabilitar
+		let enableButton = controller.enableButton()
+		self.sortButton.isEnabled = enableButton.0
+		self.sortButton.alpha = CGFloat(enableButton.1)
 	}
 	
 	private func setupTableView() {
@@ -60,7 +62,9 @@ class ViewController: UIViewController {
 	
 	// MARK: - IBAction
 	@IBAction func didPressedSort(_ sender: Any) {
-		print("did pressed")
+		controller.selectedSortName()
+		sortButton.isEnabled = false
+		sortButton.alpha = 0.5
 	}
 	
 }
@@ -104,6 +108,28 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 		
 		cell.setupCell(image: user.imageName, name: user.name)
 		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		if sortButton.isEnabled {
+			let alertController = UIAlertController(title: "Atenção!", message: "Clique no botão Sortear primeiro.", preferredStyle: .alert)
+			let actionOK = UIAlertAction(title: "OK", style: .default)
+			
+			alertController.addAction(actionOK)
+			present(alertController, animated: true)
+		} else {
+			let message = controller.didSortedName(index: indexPath.row)
+			let alertController = UIAlertController(title: "Quem vai pagar a conta??", message: message, preferredStyle: .alert)
+			let actionOK = UIAlertAction(title: "OK", style: .default) { _ in
+				self.controller.removeAll()
+				self.tableView.reloadData()
+			}
+			
+			alertController.addAction(actionOK)
+			present(alertController, animated: true)
+		}
+		
 	}
 	
 }
