@@ -23,6 +23,7 @@ class UserController {
 	
 	
 	func addUser(_ name: String) {
+        if name.isEmpty { return }
 		guard let imageName = imageNames.randomElement() else { return }
 		users.append(User(name: name, imageName: imageName))
 	}

@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 	
 	// MARK: - Variable
 	private let controller = UserController()
+    var tap: UITapGestureRecognizer = UITapGestureRecognizer()
 	
 	
 	// MARK: - Life Cycle
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
 		self.setupButton()
 		self.setupTableView()
 		self.setupTabBar()
+        self.setupKeyboardObserver()
+        self.setupGestureRecognizer()
 	}
 	
 	
@@ -36,7 +39,25 @@ class ViewController: UIViewController {
 		self.nameTextField.autocorrectionType = .no
 		self.nameTextField.autocapitalizationType = .words
 	}
-	
+    
+    private func setupGestureRecognizer() {
+        tap = UITapGestureRecognizer(target: self, action: #selector(self.dissmissKeyboard))
+    }
+    
+    private func setupKeyboardObserver() {
+        NotificationCenter
+            .default
+            .addObserver(
+                self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object:nil
+            )
+
+        NotificationCenter
+            .default
+            .addObserver(
+                self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object:nil
+            )
+    }
+    
 	private func setupButton() {
 		let enableButton = controller.enableButton()
 		self.sortButton.isEnabled = enableButton.0
@@ -58,6 +79,19 @@ class ViewController: UIViewController {
 	private func setupTabBar() {
 		tabBarController?.tabBar.barTintColor = .black
 	}
+    
+    // MARK: - Objc func
+    @objc func dissmissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        view.removeGestureRecognizer(tap)
+    }
 	
 	
 	// MARK: - IBAction
@@ -111,6 +145,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if controller.isEmpty() { return }
 		
 		if sortButton.isEnabled {
 			let alertController = UIAlertController(title: "Atenção!", message: "Clique no botão Sortear primeiro.", preferredStyle: .alert)
