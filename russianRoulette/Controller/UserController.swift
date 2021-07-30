@@ -11,6 +11,7 @@ class UserController {
 	
 	private var users = [User]()
 	private let imageNames = ["Image-1", "Image-2", "Image-3", "Image-4", "Image-5"]
+	private var selectedName: Int = 0
 	
 	var count: Int {
 		if users.isEmpty {
@@ -40,6 +41,21 @@ class UserController {
 		} else {
 			return (true, 1.0)
 		}
+	}
+	
+	func selectedSortName() {
+		selectedName = Int.random(in: 0...users.count)
+	}
+	
+	func didSortedName(index: Int) -> String {
+		if selectedName == index {
+			return "Você foi o SORTEADO!!"
+		}
+		return "Ufa, não foi você..."
+	}
+	
+	func removeAll() {
+		users.removeAll()
 	}
 	
 }
