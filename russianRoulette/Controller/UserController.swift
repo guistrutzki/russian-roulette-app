@@ -42,7 +42,7 @@ class UserController {
         users.isEmpty ? false : true
     }
     
-//    func sortUserToPay() -> User {
-//        return  users.randomElement() 
-//    }
+    func sortUserToPay() -> User? {
+        return users.randomElement()
+    }
 }

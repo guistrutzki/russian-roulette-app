@@ -82,7 +82,8 @@ class ViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func didPressedSort(_ sender: Any) {
-        print("did pressed")
+        let unluckyUser = controller.sortUserToPay()
+        print(unluckyUser)
     }
 }
 
