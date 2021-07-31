@@ -13,6 +13,8 @@ enum Constants {
     static let rouletteCell             = "RouletteCell"
     static let alertMessage             = "Você foi o premiado da vez, entregue seu cartão e faça a boa para seus amigos da mesa, pague a conta!!"
     static let buttonTitle              = "Ok"
+    static let alertVCId                = "AlertVC"
+    static let alertStoryboardId         = "Alert"
 }
 
 enum Images {
