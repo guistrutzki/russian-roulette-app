@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     private let controller = UserController()
     
+    private let alertController = AlertService()
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -79,11 +81,21 @@ class ViewController: UIViewController {
         return cell
     }
     
+   private func presentAlert(title: String, message: String, buttonTitle: String) {
+        DispatchQueue.main.async {
+            let alert = self.alertController.alert(title: title, message: message, buttonTitle: buttonTitle)
+            self.present(alert, animated: true)
+        }
+    }
+
     // MARK: - IBAction
     
     @IBAction func didPressedSort(_ sender: Any) {
         let unluckyUser = controller.sortUserToPay()
-        print(unluckyUser)
+        let title = unluckyUser?.name ?? ""
+        let message = Constants.alertMessage
+        let buttonTitle = Constants.buttonTitle
+        presentAlert(title: title, message: message, buttonTitle: buttonTitle)
     }
 }
 

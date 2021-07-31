@@ -17,6 +17,9 @@
 		5B32AC5D26B3760400504A02 /* RouletteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32AC5B26B3760400504A02 /* RouletteCell.swift */; };
 		5B32AC5E26B3760400504A02 /* RouletteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32AC5C26B3760400504A02 /* RouletteCell.xib */; };
 		703999D326B5EA1C008B9445 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703999D226B5EA1C008B9445 /* Constants.swift */; };
+		703999D626B5FC91008B9445 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703999D526B5FC91008B9445 /* Alert.storyboard */; };
+		703999D826B5FCCC008B9445 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703999D726B5FCCC008B9445 /* AlertViewController.swift */; };
+		703999DB26B60E3C008B9445 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703999DA26B60E3B008B9445 /* AlertService.swift */; };
 		BC76B98426B37F7800FF036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC76B98326B37F7800FF036B /* Assets.xcassets */; };
 		BC8DF5DA26B3842F000EB12D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5D926B3842F000EB12D /* User.swift */; };
 		BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5DD26B38467000EB12D /* UserController.swift */; };
@@ -35,6 +38,9 @@
 		5B32AC5B26B3760400504A02 /* RouletteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteCell.swift; sourceTree = "<group>"; };
 		5B32AC5C26B3760400504A02 /* RouletteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouletteCell.xib; sourceTree = "<group>"; };
 		703999D226B5EA1C008B9445 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		703999D526B5FC91008B9445 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		703999D726B5FCCC008B9445 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		703999DA26B60E3B008B9445 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		BC76B98326B37F7800FF036B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8DF5D926B3842F000EB12D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC8DF5DD26B38467000EB12D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 				BC8DF5D826B38422000EB12D /* Model */,
 				5B32AC5126B3714400504A02 /* views */,
 				BC8DF5DC26B38453000EB12D /* Controller */,
+				703999D926B60E19008B9445 /* Service */,
 				703999D426B5F4A2008B9445 /* Support */,
 				5B32AC4526B368DC00504A02 /* Info.plist */,
 				703999D126B5EA0A008B9445 /* Utilities */,
@@ -86,6 +93,8 @@
 				5B32AC5226B3715900504A02 /* CustomCells */,
 				5B32AC3D26B368D900504A02 /* Main.storyboard */,
 				5B32AC3B26B368D900504A02 /* ViewController.swift */,
+				703999D526B5FC91008B9445 /* Alert.storyboard */,
+				703999D726B5FCCC008B9445 /* AlertViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -134,6 +143,14 @@
 				5B32AC3726B368D900504A02 /* AppDelegate.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		703999D926B60E19008B9445 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				703999DA26B60E3B008B9445 /* AlertService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		BC8DF5D826B38422000EB12D /* Model */ = {
@@ -214,6 +231,7 @@
 				5B32AC4426B368DC00504A02 /* LaunchScreen.storyboard in Resources */,
 				5B32AC3F26B368D900504A02 /* Main.storyboard in Resources */,
 				BC76B98426B37F7800FF036B /* Assets.xcassets in Resources */,
+				703999D626B5FC91008B9445 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +246,8 @@
 				5B32AC3C26B368D900504A02 /* ViewController.swift in Sources */,
 				BC8DF5DA26B3842F000EB12D /* User.swift in Sources */,
 				5B32AC5D26B3760400504A02 /* RouletteCell.swift in Sources */,
+				703999DB26B60E3C008B9445 /* AlertService.swift in Sources */,
+				703999D826B5FCCC008B9445 /* AlertViewController.swift in Sources */,
 				BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */,
 				5B32AC3826B368D900504A02 /* AppDelegate.swift in Sources */,
 				5B32AC3A26B368D900504A02 /* SceneDelegate.swift in Sources */,
