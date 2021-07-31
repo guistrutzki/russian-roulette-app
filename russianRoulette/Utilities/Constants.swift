@@ -14,9 +14,11 @@ enum Constants {
 }
 
 enum Images {
-    static let placeholder              = UIImage(named: "")
-    static let emptyStateLogo           = UIImage(named: "")
-    static let ghLogo                   = UIImage(named: "")
+    static let imageOne              = UIImage(named: "Image-1")
+    static let imageTwo           = UIImage(named: "Image-2")
+    static let imageThree                  = UIImage(named: "Image-3")
+    static let imageFour                  = UIImage(named: "Image-4")
+    static let imageFive                   = UIImage(named: "Image-5")
 }
 
 

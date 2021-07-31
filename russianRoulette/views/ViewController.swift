@@ -19,20 +19,15 @@ class ViewController: UIViewController {
     
     private let controller = UserController()
     
-    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupButton()
     }
-    
     
     // MARK: - Private Functions
-
-    private func setupButton() {
-        // TODO: Regra para habilitar e desabilitar
-    }
 
     private func setupUI() {
         self.nameTextField.delegate = self
@@ -51,6 +46,16 @@ class ViewController: UIViewController {
         self.tableView.tableFooterView = footerView
         
         tabBarController?.tabBar.barTintColor = .black
+    }
+    
+    private func setupButton() {
+        let isEnabled = controller.isButtonEnabled()
+        sortButton.isEnabled = isEnabled
+        sortButton.backgroundColor = setButtonBackgroundColor(isOn: isEnabled)
+    }
+    
+    private func setButtonBackgroundColor(isOn: Bool) -> UIColor {
+        return isOn ?  .systemBlue : .systemGray2
     }
     
     private func getRouletteCell() -> UITableViewCell {
@@ -81,7 +86,6 @@ class ViewController: UIViewController {
     }
 }
 
-
 // MARK: - Extension UITextField
 
 extension ViewController: UITextFieldDelegate {
@@ -98,7 +102,6 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-
 // MARK: - Extension UITableView
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -108,7 +111,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         return controller.isEmpty() ? getRouletteCell() : getUserCell(index: indexPath.row)
     }
 }

@@ -9,17 +9,17 @@ import UIKit
 
 class UserCell: UITableViewCell {
 	
+    // MARK: - IBOutlet
+    
 	@IBOutlet weak var avatarImage: UIImageView!
 	@IBOutlet weak var nameLabel: UILabel!
 	
     static let identifier = Constants.userCell
 	
-	override func awakeFromNib() {
-		super.awakeFromNib()
-	}
-	
-	func setupCell(image: String, name: String) {
-		self.avatarImage.image = UIImage(named: image)
+    // MARK: - Functions
+    
+	func setupCell(image: UIImage, name: String) {
+		self.avatarImage.image = image
 		self.nameLabel.text = name
 	}
 }
