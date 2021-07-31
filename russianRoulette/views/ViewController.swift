@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     
-    // MARK: - Function
+    // MARK: - Private Functions
 
     private func setupButton() {
         // TODO: Regra para habilitar e desabilitar
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 
     private func setupUI() {
         self.nameTextField.delegate = self
-        self.nameTextField.placeholder = "Digite seu nome"
+        self.nameTextField.placeholder = Constants.placeholder
         self.nameTextField.autocorrectionType = .no
         self.nameTextField.autocapitalizationType = .words
         
@@ -74,12 +74,11 @@ class ViewController: UIViewController {
         return cell
     }
     
-    
     // MARK: - IBAction
+    
     @IBAction func didPressedSort(_ sender: Any) {
         print("did pressed")
     }
-    
 }
 
 
@@ -111,6 +110,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         return controller.isEmpty() ? getRouletteCell() : getUserCell(index: indexPath.row)
-        
     }
 }

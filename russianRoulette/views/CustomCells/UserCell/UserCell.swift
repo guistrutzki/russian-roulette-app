@@ -12,7 +12,7 @@ class UserCell: UITableViewCell {
 	@IBOutlet weak var avatarImage: UIImageView!
 	@IBOutlet weak var nameLabel: UILabel!
 	
-	static let identifier = "UserCell"
+    static let identifier = Constants.userCell
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -22,5 +22,4 @@ class UserCell: UITableViewCell {
 		self.avatarImage.image = UIImage(named: image)
 		self.nameLabel.text = name
 	}
-	
 }
