@@ -5,9 +5,9 @@
 //  Created by Alexandre Cardoso on 29/07/21.
 //
 
-import Foundation
+import UIKit
 
 struct User {
 	let name: String
-	let imageName: String
+	let imageName: UIImage
 }
