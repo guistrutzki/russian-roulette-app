@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     // MARK: - Variable
     
     private let controller = UserController()
+    var tap: UITapGestureRecognizer = UITapGestureRecognizer()
     
     private let alertController = AlertService()
     
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupButton()
+        setupGestureRecognizer()
+        setupKeyboardObserver()
     }
     
     // MARK: - Private Functions
@@ -81,11 +84,42 @@ class ViewController: UIViewController {
         return cell
     }
     
-   private func presentAlert(title: String, message: String, buttonTitle: String) {
+    private func setupGestureRecognizer() {
+        tap = UITapGestureRecognizer(target: self, action: #selector(self.dissmissKeyboard))
+    }
+    
+    private func setupKeyboardObserver() {
+        NotificationCenter
+            .default
+            .addObserver(
+                self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object:nil
+            )
+
+        NotificationCenter
+            .default
+            .addObserver(
+                self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object:nil
+            )
+    }
+    
+    private func presentAlert(title: String, message: String, buttonTitle: String) {
         DispatchQueue.main.async {
             let alert = self.alertController.alert(title: title, message: message, buttonTitle: buttonTitle)
             self.present(alert, animated: true)
         }
+    }
+    
+    // MARK: - Objc func
+    @objc func dissmissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        view.removeGestureRecognizer(tap)
     }
 
     // MARK: - IBAction
