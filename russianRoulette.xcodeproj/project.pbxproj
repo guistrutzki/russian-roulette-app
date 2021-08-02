@@ -16,10 +16,12 @@
 		5B32AC5826B371EB00504A02 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32AC5626B371EB00504A02 /* UserCell.xib */; };
 		5B32AC5D26B3760400504A02 /* RouletteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32AC5B26B3760400504A02 /* RouletteCell.swift */; };
 		5B32AC5E26B3760400504A02 /* RouletteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32AC5C26B3760400504A02 /* RouletteCell.xib */; };
+		5BC5DDEE26B7B242002BA1DF /* credit-card.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5DDED26B7B242002BA1DF /* credit-card.json */; };
 		703999D326B5EA1C008B9445 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703999D226B5EA1C008B9445 /* Constants.swift */; };
 		703999D626B5FC91008B9445 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703999D526B5FC91008B9445 /* Alert.storyboard */; };
 		703999D826B5FCCC008B9445 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703999D726B5FCCC008B9445 /* AlertViewController.swift */; };
 		703999DB26B60E3C008B9445 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703999DA26B60E3B008B9445 /* AlertService.swift */; };
+		ADDF09EE04538669F4EAB499 /* libPods-russianRoulette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A66D7E1D0C74FFF8B2B63B /* libPods-russianRoulette.a */; };
 		BC76B98426B37F7800FF036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC76B98326B37F7800FF036B /* Assets.xcassets */; };
 		BC8DF5DA26B3842F000EB12D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5D926B3842F000EB12D /* User.swift */; };
 		BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5DD26B38467000EB12D /* UserController.swift */; };
@@ -37,10 +39,14 @@
 		5B32AC5626B371EB00504A02 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		5B32AC5B26B3760400504A02 /* RouletteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteCell.swift; sourceTree = "<group>"; };
 		5B32AC5C26B3760400504A02 /* RouletteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouletteCell.xib; sourceTree = "<group>"; };
+		5BC5DDED26B7B242002BA1DF /* credit-card.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "credit-card.json"; sourceTree = "<group>"; };
 		703999D226B5EA1C008B9445 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		703999D526B5FC91008B9445 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		703999D726B5FCCC008B9445 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		703999DA26B60E3B008B9445 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		73A66D7E1D0C74FFF8B2B63B /* libPods-russianRoulette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-russianRoulette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5FBA1012D1096424DAB572 /* Pods-russianRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-russianRoulette.release.xcconfig"; path = "Target Support Files/Pods-russianRoulette/Pods-russianRoulette.release.xcconfig"; sourceTree = "<group>"; };
+		A224BB7C6BD6B48EEE687724 /* Pods-russianRoulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-russianRoulette.debug.xcconfig"; path = "Target Support Files/Pods-russianRoulette/Pods-russianRoulette.debug.xcconfig"; sourceTree = "<group>"; };
 		BC76B98326B37F7800FF036B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8DF5D926B3842F000EB12D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC8DF5DD26B38467000EB12D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDF09EE04538669F4EAB499 /* libPods-russianRoulette.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,8 @@
 			children = (
 				5B32AC3626B368D900504A02 /* russianRoulette */,
 				5B32AC3526B368D900504A02 /* Products */,
+				61E6426FA3F11DAF50CE9F6D /* Pods */,
+				8E585C0A9E34CA98111D3081 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +135,24 @@
 			path = RouletteCell;
 			sourceTree = "<group>";
 		};
+		5BC5DDEC26B7B235002BA1DF /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				5BC5DDED26B7B242002BA1DF /* credit-card.json */,
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
+		61E6426FA3F11DAF50CE9F6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A224BB7C6BD6B48EEE687724 /* Pods-russianRoulette.debug.xcconfig */,
+				7B5FBA1012D1096424DAB572 /* Pods-russianRoulette.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		703999D126B5EA0A008B9445 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +164,7 @@
 		703999D426B5F4A2008B9445 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				5BC5DDEC26B7B235002BA1DF /* animations */,
 				BC76B98326B37F7800FF036B /* Assets.xcassets */,
 				5B32AC4226B368DC00504A02 /* LaunchScreen.storyboard */,
 				5B32AC3926B368D900504A02 /* SceneDelegate.swift */,
@@ -151,6 +179,14 @@
 				703999DA26B60E3B008B9445 /* AlertService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		8E585C0A9E34CA98111D3081 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73A66D7E1D0C74FFF8B2B63B /* libPods-russianRoulette.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BC8DF5D826B38422000EB12D /* Model */ = {
@@ -176,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B32AC4826B368DC00504A02 /* Build configuration list for PBXNativeTarget "russianRoulette" */;
 			buildPhases = (
+				9A09D43369DB279E40DF01E7 /* [CP] Check Pods Manifest.lock */,
 				5B32AC3026B368D900504A02 /* Sources */,
 				5B32AC3126B368D900504A02 /* Frameworks */,
 				5B32AC3226B368D900504A02 /* Resources */,
@@ -230,12 +267,38 @@
 				5B32AC5E26B3760400504A02 /* RouletteCell.xib in Resources */,
 				5B32AC4426B368DC00504A02 /* LaunchScreen.storyboard in Resources */,
 				5B32AC3F26B368D900504A02 /* Main.storyboard in Resources */,
+				5BC5DDEE26B7B242002BA1DF /* credit-card.json in Resources */,
 				BC76B98426B37F7800FF036B /* Assets.xcassets in Resources */,
 				703999D626B5FC91008B9445 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A09D43369DB279E40DF01E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-russianRoulette-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B32AC3026B368D900504A02 /* Sources */ = {
@@ -395,6 +458,7 @@
 		};
 		5B32AC4926B368DC00504A02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A224BB7C6BD6B48EEE687724 /* Pods-russianRoulette.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -415,6 +479,7 @@
 		};
 		5B32AC4A26B368DC00504A02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B5FBA1012D1096424DAB572 /* Pods-russianRoulette.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

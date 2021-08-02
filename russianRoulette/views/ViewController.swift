@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
     
@@ -14,11 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var sortButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var animatedViewWrapper: UIView!
     
     // MARK: - Variable
     
     private let controller = UserController()
-    var tap: UITapGestureRecognizer = UITapGestureRecognizer()
+    private let animationView = AnimationView()
+    private var tap: UITapGestureRecognizer = UITapGestureRecognizer()
     
     private let alertController = AlertService()
     
@@ -30,6 +33,10 @@ class ViewController: UIViewController {
         setupButton()
         setupGestureRecognizer()
         setupKeyboardObserver()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupLottie()
     }
     
     // MARK: - Private Functions
@@ -51,6 +58,23 @@ class ViewController: UIViewController {
         self.tableView.tableFooterView = footerView
         
         tabBarController?.tabBar.barTintColor = .black
+    }
+    
+    private func setupLottie() {
+        let animation = Animation.named("credit-card")
+        
+        animationView.animation = animation
+        animationView.contentMode = .scaleAspectFit
+        animatedViewWrapper.addSubview(animationView)
+        
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.topAnchor.constraint(equalTo: animatedViewWrapper.layoutMarginsGuide.topAnchor).isActive = true
+        animationView.leadingAnchor.constraint(equalTo: animatedViewWrapper.leadingAnchor).isActive = true
+
+        animationView.trailingAnchor.constraint(equalTo: animatedViewWrapper.trailingAnchor).isActive = true
+        animationView.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
+        
+        animationView.play(fromFrame: 0, toFrame: 200, loopMode: .loop)
     }
     
     private func setupButton() {
@@ -125,11 +149,8 @@ class ViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func didPressedSort(_ sender: Any) {
-        let unluckyUser = controller.sortUserToPay()
-        let title = unluckyUser?.name ?? ""
-        let message = Constants.alertMessage
-        let buttonTitle = Constants.buttonTitle
-        presentAlert(title: title, message: message, buttonTitle: buttonTitle)
+        controller.sortUserToPay()
+        controller.setCanSelectuser(true)
     }
 }
 
@@ -159,5 +180,28 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return controller.isEmpty() ? getRouletteCell() : getUserCell(index: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedIndex = controller.getSelectedUserIndex()
+        
+        if !controller.getCanSelectUser() {
+            let alertController = UIAlertController(title: "Atenção!", message: "Clique no botão Sortear primeiro.", preferredStyle: .alert)
+            
+            let actionOK = UIAlertAction(title: "OK", style: .default)
+                        
+            alertController.addAction(actionOK)
+            present(alertController, animated: true)
+            
+            return
+        }
+        
+        if selectedIndex == indexPath.row {
+            let unluckyUser = controller.getUser(index: selectedIndex)
+            let title = unluckyUser.name
+            let message = Constants.alertMessage
+            let buttonTitle = Constants.buttonTitle
+            presentAlert(title: title, message: message, buttonTitle: buttonTitle)
+        }
     }
 }
