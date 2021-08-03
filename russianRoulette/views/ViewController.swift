@@ -59,6 +59,10 @@ class ViewController: UIViewController {
 		tabBarController?.tabBar.barTintColor = .black
 	}
 	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		view.endEditing(true)
+	}
+	
 	
 	// MARK: - IBAction
 	@IBAction func didPressedSort(_ sender: Any) {
