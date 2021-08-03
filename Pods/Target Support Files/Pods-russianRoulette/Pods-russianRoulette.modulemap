@@ -1,0 +1,6 @@
+module Pods_russianRoulette {
+  umbrella header "Pods-russianRoulette-umbrella.h"
+
+  export *
+  module * { export * }
+}
