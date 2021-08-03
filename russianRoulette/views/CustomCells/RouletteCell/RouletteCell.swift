@@ -9,9 +9,11 @@ import UIKit
 
 class RouletteCell: UITableViewCell {
     
-    static let identifier = "RouletteCell"
+    static let identifier = Constants.rouletteCell
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.selectionStyle = .none
     }
 }
