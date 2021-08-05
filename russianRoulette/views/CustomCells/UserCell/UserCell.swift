@@ -18,8 +18,8 @@ class UserCell: UITableViewCell {
 	
     // MARK: - Functions
     
-	func setupCell(image: UIImage, name: String) {
-		self.avatarImage.image = image
-		self.nameLabel.text = name
+	func setupCell(user: User) {
+		self.avatarImage.image = user.imageName
+		self.nameLabel.text = user.name
 	}
 }

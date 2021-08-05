@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         
         let user = controller.getUser(index: index)
         
-        cell.setupCell(image: user.imageName , name: user.name )
+        cell.setupCell(user: user)
         
         return cell
     }
