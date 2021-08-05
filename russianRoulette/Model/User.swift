@@ -7,7 +7,12 @@
 
 import UIKit
 
-struct User {
+class User: NSObject {
 	let name: String
 	let imageName: UIImage
+	
+	init(name: String, imageName: UIImage) {
+		 self.name = name
+		 self.imageName = imageName
+	}
 }

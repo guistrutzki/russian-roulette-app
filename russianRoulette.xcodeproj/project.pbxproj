@@ -25,6 +25,8 @@
 		BC76B98426B37F7800FF036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC76B98326B37F7800FF036B /* Assets.xcassets */; };
 		BC8DF5DA26B3842F000EB12D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5D926B3842F000EB12D /* User.swift */; };
 		BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5DD26B38467000EB12D /* UserController.swift */; };
+		BCB740FC26BCA6F5001D78D7 /* Historico.json in Resources */ = {isa = PBXBuildFile; fileRef = BCB740FB26BCA6F5001D78D7 /* Historico.json */; };
+		BCB740FE26BCA6FD001D78D7 /* Account.json in Resources */ = {isa = PBXBuildFile; fileRef = BCB740FD26BCA6FD001D78D7 /* Account.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		BC76B98326B37F7800FF036B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8DF5D926B3842F000EB12D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC8DF5DD26B38467000EB12D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		BCB740FB26BCA6F5001D78D7 /* Historico.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Historico.json; sourceTree = "<group>"; };
+		BCB740FD26BCA6FD001D78D7 /* Account.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Account.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,13 +153,14 @@
 				A224BB7C6BD6B48EEE687724 /* Pods-russianRoulette.debug.xcconfig */,
 				7B5FBA1012D1096424DAB572 /* Pods-russianRoulette.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		703999D126B5EA0A008B9445 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BCB740FD26BCA6FD001D78D7 /* Account.json */,
+				BCB740FB26BCA6F5001D78D7 /* Historico.json */,
 				703999D226B5EA1C008B9445 /* Constants.swift */,
 			);
 			path = Utilities;
@@ -265,6 +270,8 @@
 			files = (
 				5B32AC5826B371EB00504A02 /* UserCell.xib in Resources */,
 				5B32AC5E26B3760400504A02 /* RouletteCell.xib in Resources */,
+				BCB740FC26BCA6F5001D78D7 /* Historico.json in Resources */,
+				BCB740FE26BCA6FD001D78D7 /* Account.json in Resources */,
 				5B32AC4426B368DC00504A02 /* LaunchScreen.storyboard in Resources */,
 				5B32AC3F26B368D900504A02 /* Main.storyboard in Resources */,
 				5BC5DDEE26B7B242002BA1DF /* credit-card.json in Resources */,
@@ -473,7 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aguitech.russianRoulette;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -494,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aguitech.russianRoulette;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
