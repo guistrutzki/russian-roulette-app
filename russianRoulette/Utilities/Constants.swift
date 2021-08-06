@@ -16,6 +16,8 @@ enum Constants {
     static let buttonTitle              = "Ok"
     static let alertVCId                = "AlertVC"
     static let alertStoryboardId        = "Alert"
+    static let CheckoutStoryboardID     = "CheckoutVC"
+    static let CheckoutVCId             = "Main"
 }
 
 enum Images {

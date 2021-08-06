@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AlertViewControllerDelegate: AnyObject {
+    func actionButtonTapped()
+}
+
 class AlertViewController: UIViewController {
     
     // MARK: - IBOutlet
@@ -25,6 +29,8 @@ class AlertViewController: UIViewController {
     
     var buttonTitle = String()
     
+    weak var delegate: AlertViewControllerDelegate?
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -34,7 +40,7 @@ class AlertViewController: UIViewController {
     }
     
     @IBAction func OKButtonPressed(_ sender: UIButton) {
-        dismiss(animated: true)
+        delegate?.actionButtonTapped()
     }
     
     // MARK: - Private Functions

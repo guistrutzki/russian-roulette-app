@@ -24,6 +24,7 @@ class CheckoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        controller.loadItems()
     }
     
     
@@ -63,9 +64,7 @@ extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
         return 3
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return getItemOrderCell()
     }
-    
 }

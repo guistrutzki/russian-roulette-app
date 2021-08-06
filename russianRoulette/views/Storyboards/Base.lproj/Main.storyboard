@@ -19,15 +19,15 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="egP-jv-LDd"/>
-                        <segue destination="XFZ-jK-bjK" kind="relationship" relationship="viewControllers" id="h5K-Ei-qYV"/>
+                        <segue destination="9RR-VF-s4y" kind="relationship" relationship="viewControllers" id="egP-jv-LDd"/>
+                        <segue destination="XFZ-jK-bjK" kind="relationship" relationship="viewControllers" id="NjT-PP-aLg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWf-TB-gpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1323" y="-121"/>
         </scene>
-        <!--Roleta-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="russianRoulette" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,7 +104,7 @@
                             <constraint firstItem="KJS-Md-1Ml" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gVT-pn-0uK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Roleta" image="dot.arrowtriangles.up.right.down.left.circle" catalog="system" id="h5Z-5N-utU"/>
+                    <navigationItem key="navigationItem" id="UJW-zK-37T"/>
                     <connections>
                         <outlet property="animatedViewWrapper" destination="5pr-C6-60x" id="Z8P-Qk-MKo"/>
                         <outlet property="nameTextField" destination="D4E-Nc-0Oz" id="4bI-NI-YZe"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="-121"/>
+            <point key="canvasLocation" x="413.04347826086962" y="-121.20535714285714"/>
         </scene>
         <!--Histórico-->
         <scene sceneID="3oi-WP-6v7">
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dB6-WA-rS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304" y="-121"/>
+            <point key="canvasLocation" x="-1323" y="587"/>
         </scene>
         <!--Checkout View Controller-->
         <scene sceneID="xu5-L2-M4h">
@@ -215,7 +215,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rj-I1-QPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="-121.20535714285714"/>
+            <point key="canvasLocation" x="1215.9420289855072" y="-121.20535714285714"/>
+        </scene>
+        <!--Roleta-->
+        <scene sceneID="wQr-Sr-m9j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9RR-VF-s4y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Roleta" image="dot.arrowtriangles.up.right.down.left.circle" catalog="system" id="h5Z-5N-utU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vcp-fa-6U5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ThR-Fy-T7g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUC-Xb-own" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-497.10144927536237" y="-121.20535714285714"/>
         </scene>
     </scenes>
     <resources>

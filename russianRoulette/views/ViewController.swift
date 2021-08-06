@@ -116,6 +116,12 @@ class ViewController: UIViewController {
 			self.present(alert, animated: true)
 		}
 	}
+    
+    private func proceedToAccount() {
+        let storyboard = UIStoryboard(name: Constants.CheckoutVCId, bundle: .main)
+        let checkoutVC = storyboard.instantiateViewController(withIdentifier: Constants.CheckoutStoryboardID) as! CheckoutViewController
+        self.navigationController?.pushViewController(checkoutVC , animated: true)
+    }
 	
 	// MARK: - IBAction
 	
@@ -159,7 +165,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 
-// MARK: - Extension ControllerDelegate
+// MARK: - Extension UserControllerDelegate
 
 extension ViewController: UserControllerDelegate {
 	
@@ -172,8 +178,14 @@ extension ViewController: UserControllerDelegate {
 		let message = Constants.alertMessage
 		let buttonTitle = Constants.buttonTitle
 		presentAlert(title: title, message: message, buttonTitle: buttonTitle)
-		print("vc se lascou... vai pagar a conta")
 	}
-	
 }
 
+// MARK: - Extension AlertViewControllerDelegate
+
+extension ViewController: AlertViewControllerDelegate {
+    
+    func actionButtonTapped() {
+        proceedToAccount()
+    }
+}
