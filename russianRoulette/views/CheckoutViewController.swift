@@ -49,7 +49,7 @@ class CheckoutViewController: UIViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier)
                     as? ItemOrderCell else { return UITableViewCell() }
         
-        cell.setup(items: <#T##ListItem#>)
+       // cell.setup(items: )
     
         return cell
     }
