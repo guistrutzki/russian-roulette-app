@@ -33,5 +33,12 @@ class CheckoutController {
 		}
 	}
 	
+	func getTotalValue() -> String {
+		return String(format: "%.2f", order?.totalValue ?? 0.0)
+	}
+	
+	func getItemOrder(indexPath: IndexPath) -> ItemOrder? {
+		return order?.productList[indexPath.row]
+	}
 	
 }

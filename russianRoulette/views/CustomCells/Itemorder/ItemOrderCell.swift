@@ -23,4 +23,10 @@ class ItemOrderCell: UITableViewCell {
 		super.awakeFromNib()
 	}
 	
+	
+	// MARK: - Function
+	func setupCell(item: ItemOrder) {
+		itemNameLabel.text = item.name
+	}
+	
 }

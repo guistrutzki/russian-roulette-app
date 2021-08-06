@@ -55,7 +55,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="itemNameLabel" destination="J8I-EI-hPl" id="ssf-sC-pkA"/>
                 <outlet property="itemPriceLabel" destination="m5C-yC-Zub" id="4e1-Fj-oVb"/>

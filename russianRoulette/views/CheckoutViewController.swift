@@ -41,9 +41,13 @@ class CheckoutViewController: UIViewController {
 		self.tableView.tableFooterView = footerView
 	}
 	
-	private func getItemOrderCell() -> UITableViewCell {
+	private func getItemOrderCell(_ indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemOrderCell.identifier)
-					as? ItemOrderCell else { return UITableViewCell() }
+					as? ItemOrderCell,
+				let itemOrder = controller.getItemOrder(indexPath: indexPath) else { return UITableViewCell() }
+		
+		cell.setupCell(item: itemOrder)
+		
 		return cell
 	}
 	
@@ -68,7 +72,11 @@ extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return getItemOrderCell()
+		return getItemOrderCell(indexPath)
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 	
 }
@@ -80,6 +88,7 @@ extension CheckoutViewController: CheckoutControllerDelegate {
 	func successFetch() {
 		DispatchQueue.main.async {
 			self.tableView.reloadData()
+			self.totalLabel.text = self.controller.getTotalValue()
 		}
 	}
 	
