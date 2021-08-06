@@ -135,7 +135,7 @@
         <!--Checkout View Controller-->
         <scene sceneID="xu5-L2-M4h">
             <objects>
-                <viewController storyboardIdentifier="CheckoutVC" id="n53-hC-6IE" customClass="CheckoutViewController" customModule="russianRoulette" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckoutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n53-hC-6IE" customClass="CheckoutViewController" customModule="russianRoulette" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4nC-0w-BED">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +189,7 @@
                                     <constraint firstItem="eUQ-he-GbI" firstAttribute="leading" secondItem="sJU-wO-9pT" secondAttribute="trailing" constant="20" id="uL1-CA-cd3"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gvc-SK-9gz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dWm-wA-yh3">
                                 <rect key="frame" x="0.0" y="44" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -199,23 +199,23 @@
                         <constraints>
                             <constraint firstItem="EmZ-uT-5Sr" firstAttribute="trailing" secondItem="fH6-Sv-U4d" secondAttribute="trailing" id="Kk2-91-RlI"/>
                             <constraint firstItem="EmZ-uT-5Sr" firstAttribute="height" secondItem="4nC-0w-BED" secondAttribute="height" multiplier="0.2" id="c4a-Oe-xr3"/>
-                            <constraint firstItem="fH6-Sv-U4d" firstAttribute="trailing" secondItem="gvc-SK-9gz" secondAttribute="trailing" id="gUk-Dp-QMm"/>
+                            <constraint firstItem="EmZ-uT-5Sr" firstAttribute="top" secondItem="dWm-wA-yh3" secondAttribute="bottom" id="dxi-Jr-ceE"/>
                             <constraint firstItem="EmZ-uT-5Sr" firstAttribute="leading" secondItem="fH6-Sv-U4d" secondAttribute="leading" id="h5b-K1-EYY"/>
-                            <constraint firstItem="gvc-SK-9gz" firstAttribute="leading" secondItem="fH6-Sv-U4d" secondAttribute="leading" id="iXx-l9-fH7"/>
-                            <constraint firstItem="EmZ-uT-5Sr" firstAttribute="top" secondItem="gvc-SK-9gz" secondAttribute="bottom" id="liZ-sH-8um"/>
-                            <constraint firstItem="gvc-SK-9gz" firstAttribute="top" secondItem="fH6-Sv-U4d" secondAttribute="top" id="sCa-lQ-MeR"/>
+                            <constraint firstItem="fH6-Sv-U4d" firstAttribute="trailing" secondItem="dWm-wA-yh3" secondAttribute="trailing" id="u4s-FR-vjX"/>
                             <constraint firstAttribute="bottom" secondItem="EmZ-uT-5Sr" secondAttribute="bottom" id="uty-Ga-bgd"/>
+                            <constraint firstItem="dWm-wA-yh3" firstAttribute="leading" secondItem="fH6-Sv-U4d" secondAttribute="leading" id="v0z-6d-zil"/>
+                            <constraint firstItem="dWm-wA-yh3" firstAttribute="top" secondItem="fH6-Sv-U4d" secondAttribute="top" id="zxY-z1-hH5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="payButton" destination="eUQ-he-GbI" id="BEk-XP-KWl"/>
-                        <outlet property="tableView" destination="gvc-SK-9gz" id="yvY-we-9hl"/>
+                        <outlet property="tableView" destination="dWm-wA-yh3" id="bnd-X6-7Ob"/>
                         <outlet property="totalLabel" destination="gAh-zO-c2n" id="PqV-g4-2RU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rj-I1-QPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="-121.20535714285714"/>
+            <point key="canvasLocation" x="1209" y="-121"/>
         </scene>
     </scenes>
     <resources>
