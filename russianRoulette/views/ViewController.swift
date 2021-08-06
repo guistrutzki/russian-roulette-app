@@ -171,11 +171,14 @@ extension ViewController: UserControllerDelegate {
 	
 	func showSortedUser(name: String) {
 		self.alert?.showAlert(title: name, message: Constants.alertMessage, completion: {
-			print("Clicou no OK")
 			guard let checkoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CheckoutVC")
 						as? CheckoutViewController else { return }
+			
 			self.present(checkoutVC, animated: true) {
-				print("Voltou")
+				self.controller.setCanSelectuser(false)
+				self.controller.removeAllUsers()
+				self.setupButton()
+				self.tableView.reloadData()
 			}
 		})
 	}

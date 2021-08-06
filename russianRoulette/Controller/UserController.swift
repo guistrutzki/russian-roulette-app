@@ -77,4 +77,8 @@ class UserController {
 		}
 	}
 	
+	func removeAllUsers() {
+		users.removeAll()
+	}
+	
 }
