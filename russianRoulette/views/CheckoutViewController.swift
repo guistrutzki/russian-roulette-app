@@ -9,15 +9,15 @@ import UIKit
 
 class CheckoutViewController: UIViewController {
     
+    // MARK: - IBOutlet
     
     @IBOutlet var tableView: UITableView!
     
-    
     @IBOutlet var totalLabel: UILabel!
-    
     
     @IBOutlet var payButton: UIButton!
     
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +51,8 @@ class CheckoutViewController: UIViewController {
     }
     
 }
+
+// MARK: - TableViewDelegate  and DataSource extension
 
 extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
