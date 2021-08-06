@@ -26,6 +26,8 @@ enum Images {
     static let imageFive                = UIImage(named: "Image-5")
     static let imageRolette             = UIImage(named: "roleta")
     static let imageSkull               = UIImage(named: "Image")
+    static let imageFood                = UIImage(named: "food")
+    static let imageBeer                = UIImage(named: "beer")
 }
 
 

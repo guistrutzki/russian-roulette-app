@@ -12,10 +12,12 @@ class CheckoutViewController: UIViewController {
     // MARK: - IBOutlet
     
     @IBOutlet var tableView: UITableView!
-    
     @IBOutlet var totalLabel: UILabel!
-    
     @IBOutlet var payButton: UIButton!
+    
+    // MARK: - Variable
+    
+    private let controller = ListItemController()
     
     // MARK: - Life Cycle
     
@@ -46,6 +48,8 @@ class CheckoutViewController: UIViewController {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier)
                     as? ItemOrderCell else { return UITableViewCell() }
+        
+        cell.setup(items: <#T##ListItem#>)
     
         return cell
     }

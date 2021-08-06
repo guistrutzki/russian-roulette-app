@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct ListItem {
+struct ListItem: Decodable {
     
     let totalValue: Double
     let productList: [Items]
 }
 
-struct Items {
+struct Items: Decodable {
     
     let productID: String
     let productType: String
