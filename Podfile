@@ -7,4 +7,6 @@ target 'russianRoulette' do
 
   # Pods for russianRoulette
   pod 'lottie-ios'
+	pod 'PopupDialog', '~> 1.1'
+	
 end

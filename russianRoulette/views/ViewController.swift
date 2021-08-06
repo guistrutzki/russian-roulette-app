@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 	private let controller = UserController()
 	private let animationView = AnimationView()
 	private let alertController = AlertService()
-	//	private var alert: Alert?
+	private var alert: Alert?
 	
 	// MARK: - Life Cycle
 	
@@ -29,6 +29,8 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		self.controller.delegate = self
+		self.alert = Alert(viewController: self)
+		
 		setupUI()
 		setupButton()
 	}
@@ -168,11 +170,9 @@ extension ViewController: UserControllerDelegate {
 	}
 	
 	func showSortedUser(name: String) {
-		let title = name
-		let message = Constants.alertMessage
-		let buttonTitle = Constants.buttonTitle
-		presentAlert(title: title, message: message, buttonTitle: buttonTitle)
-		print("vc se lascou... vai pagar a conta")
+		self.alert?.showAlert(title: name, message: Constants.alertMessage, completion: {
+			print("Clicou no OK")
+		})
 	}
 	
 }
