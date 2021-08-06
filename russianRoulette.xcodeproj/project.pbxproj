@@ -21,6 +21,9 @@
 		703999D626B5FC91008B9445 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703999D526B5FC91008B9445 /* Alert.storyboard */; };
 		703999D826B5FCCC008B9445 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703999D726B5FCCC008B9445 /* AlertViewController.swift */; };
 		703999DB26B60E3C008B9445 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703999DA26B60E3B008B9445 /* AlertService.swift */; };
+		7053328D26BCBE8A0011651F /* ItemOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7053328B26BCBE8A0011651F /* ItemOrderCell.xib */; };
+		7053328E26BCBE8A0011651F /* ItemOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053328C26BCBE8A0011651F /* ItemOrderCell.swift */; };
+		7053329026BCBE940011651F /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053328F26BCBE940011651F /* CheckoutViewController.swift */; };
 		ADDF09EE04538669F4EAB499 /* libPods-russianRoulette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A66D7E1D0C74FFF8B2B63B /* libPods-russianRoulette.a */; };
 		BC76B98426B37F7800FF036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC76B98326B37F7800FF036B /* Assets.xcassets */; };
 		BC8DF5DA26B3842F000EB12D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5D926B3842F000EB12D /* User.swift */; };
@@ -46,6 +49,9 @@
 		703999D526B5FC91008B9445 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		703999D726B5FCCC008B9445 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		703999DA26B60E3B008B9445 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		7053328B26BCBE8A0011651F /* ItemOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemOrderCell.xib; sourceTree = "<group>"; };
+		7053328C26BCBE8A0011651F /* ItemOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemOrderCell.swift; sourceTree = "<group>"; };
+		7053328F26BCBE940011651F /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		73A66D7E1D0C74FFF8B2B63B /* libPods-russianRoulette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-russianRoulette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5FBA1012D1096424DAB572 /* Pods-russianRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-russianRoulette.release.xcconfig"; path = "Target Support Files/Pods-russianRoulette/Pods-russianRoulette.release.xcconfig"; sourceTree = "<group>"; };
 		A224BB7C6BD6B48EEE687724 /* Pods-russianRoulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-russianRoulette.debug.xcconfig"; path = "Target Support Files/Pods-russianRoulette/Pods-russianRoulette.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,10 +109,10 @@
 		5B32AC5126B3714400504A02 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7053328F26BCBE940011651F /* CheckoutViewController.swift */,
+				7053328926BCBC260011651F /* Storyboards */,
 				5B32AC5226B3715900504A02 /* CustomCells */,
-				5B32AC3D26B368D900504A02 /* Main.storyboard */,
 				5B32AC3B26B368D900504A02 /* ViewController.swift */,
-				703999D526B5FC91008B9445 /* Alert.storyboard */,
 				703999D726B5FCCC008B9445 /* AlertViewController.swift */,
 			);
 			path = views;
@@ -115,6 +121,7 @@
 		5B32AC5226B3715900504A02 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				7053328A26BCBE8A0011651F /* Itemorder */,
 				5B32AC5A26B375EB00504A02 /* RouletteCell */,
 				5B32AC5926B375E200504A02 /* UserCell */,
 			);
@@ -184,6 +191,25 @@
 				703999DA26B60E3B008B9445 /* AlertService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		7053328926BCBC260011651F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				703999D526B5FC91008B9445 /* Alert.storyboard */,
+				5B32AC3D26B368D900504A02 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7053328A26BCBE8A0011651F /* Itemorder */ = {
+			isa = PBXGroup;
+			children = (
+				7053328B26BCBE8A0011651F /* ItemOrderCell.xib */,
+				7053328C26BCBE8A0011651F /* ItemOrderCell.swift */,
+			);
+			name = Itemorder;
+			path = "../../../../../untitled folder/russian-roulette-app/russianRoulette/views/CustomCells/Itemorder";
 			sourceTree = "<group>";
 		};
 		8E585C0A9E34CA98111D3081 /* Frameworks */ = {
@@ -271,6 +297,7 @@
 				5B32AC5826B371EB00504A02 /* UserCell.xib in Resources */,
 				5B32AC5E26B3760400504A02 /* RouletteCell.xib in Resources */,
 				BCB740FC26BCA6F5001D78D7 /* Historico.json in Resources */,
+				7053328D26BCBE8A0011651F /* ItemOrderCell.xib in Resources */,
 				BCB740FE26BCA6FD001D78D7 /* Account.json in Resources */,
 				5B32AC4426B368DC00504A02 /* LaunchScreen.storyboard in Resources */,
 				5B32AC3F26B368D900504A02 /* Main.storyboard in Resources */,
@@ -316,11 +343,13 @@
 				5B32AC3C26B368D900504A02 /* ViewController.swift in Sources */,
 				BC8DF5DA26B3842F000EB12D /* User.swift in Sources */,
 				5B32AC5D26B3760400504A02 /* RouletteCell.swift in Sources */,
+				7053329026BCBE940011651F /* CheckoutViewController.swift in Sources */,
 				703999DB26B60E3C008B9445 /* AlertService.swift in Sources */,
 				703999D826B5FCCC008B9445 /* AlertViewController.swift in Sources */,
 				BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */,
 				5B32AC3826B368D900504A02 /* AppDelegate.swift in Sources */,
 				5B32AC3A26B368D900504A02 /* SceneDelegate.swift in Sources */,
+				7053328E26BCBE8A0011651F /* ItemOrderCell.swift in Sources */,
 				703999D326B5EA1C008B9445 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
