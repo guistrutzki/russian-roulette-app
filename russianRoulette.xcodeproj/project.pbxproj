@@ -26,6 +26,8 @@
 		7053329026BCBE940011651F /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053328F26BCBE940011651F /* CheckoutViewController.swift */; };
 		ADDF09EE04538669F4EAB499 /* libPods-russianRoulette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A66D7E1D0C74FFF8B2B63B /* libPods-russianRoulette.a */; };
 		BC0798DF26BCCBC000FAE3EF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0798DE26BCCBC000FAE3EF /* Alert.swift */; };
+		BC0798E326BCDA9000FAE3EF /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0798E226BCDA9000FAE3EF /* Order.swift */; };
+		BC0798E526BCDB6A00FAE3EF /* CheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0798E426BCDB6A00FAE3EF /* CheckoutController.swift */; };
 		BC76B98426B37F7800FF036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC76B98326B37F7800FF036B /* Assets.xcassets */; };
 		BC8DF5DA26B3842F000EB12D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5D926B3842F000EB12D /* User.swift */; };
 		BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5DD26B38467000EB12D /* UserController.swift */; };
@@ -57,6 +59,8 @@
 		7B5FBA1012D1096424DAB572 /* Pods-russianRoulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-russianRoulette.release.xcconfig"; path = "Target Support Files/Pods-russianRoulette/Pods-russianRoulette.release.xcconfig"; sourceTree = "<group>"; };
 		A224BB7C6BD6B48EEE687724 /* Pods-russianRoulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-russianRoulette.debug.xcconfig"; path = "Target Support Files/Pods-russianRoulette/Pods-russianRoulette.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0798DE26BCCBC000FAE3EF /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		BC0798E226BCDA9000FAE3EF /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		BC0798E426BCDB6A00FAE3EF /* CheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
 		BC76B98326B37F7800FF036B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8DF5D926B3842F000EB12D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC8DF5DD26B38467000EB12D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8DF5D926B3842F000EB12D /* User.swift */,
+				BC0798E226BCDA9000FAE3EF /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8DF5DD26B38467000EB12D /* UserController.swift */,
+				BC0798E426BCDB6A00FAE3EF /* CheckoutController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,7 +352,9 @@
 				BC8DF5DA26B3842F000EB12D /* User.swift in Sources */,
 				5B32AC5D26B3760400504A02 /* RouletteCell.swift in Sources */,
 				7053329026BCBE940011651F /* CheckoutViewController.swift in Sources */,
+				BC0798E526BCDB6A00FAE3EF /* CheckoutController.swift in Sources */,
 				BC0798DF26BCCBC000FAE3EF /* Alert.swift in Sources */,
+				BC0798E326BCDA9000FAE3EF /* Order.swift in Sources */,
 				703999DB26B60E3C008B9445 /* AlertService.swift in Sources */,
 				703999D826B5FCCC008B9445 /* AlertViewController.swift in Sources */,
 				BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */,

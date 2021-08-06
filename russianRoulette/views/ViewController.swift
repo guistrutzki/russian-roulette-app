@@ -174,6 +174,9 @@ extension ViewController: UserControllerDelegate {
 			guard let checkoutVC = self.storyboard?.instantiateViewController(withIdentifier: "CheckoutVC")
 						as? CheckoutViewController else { return }
 			
+			checkoutVC.modalPresentationStyle = .fullScreen
+			checkoutVC.view.backgroundColor = .black
+			
 			self.present(checkoutVC, animated: true) {
 				self.controller.setCanSelectuser(false)
 				self.controller.removeAllUsers()

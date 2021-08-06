@@ -14,11 +14,17 @@ class CheckoutViewController: UIViewController {
 	@IBOutlet var totalLabel: UILabel!
 	@IBOutlet var payButton: UIButton!
 	
+	// MARK: - Variable
+	private let controller = CheckoutController()
+	
 	
 	// MARK: - Life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
+		
+		controller.delegate = self
+		fetchOrder()
 	}
 	
 	
@@ -41,6 +47,10 @@ class CheckoutViewController: UIViewController {
 		return cell
 	}
 	
+	private func fetchOrder() {
+		controller.fetchOrder()
+	}
+	
 	
 	// MARK: - IBAction
 	@IBAction func payButtonTapped(_ sender: Any) {
@@ -54,11 +64,23 @@ class CheckoutViewController: UIViewController {
 extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 3
+		return controller.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		return getItemOrderCell()
+	}
+	
+}
+
+
+// MARK: - Extension CheckoutController
+extension CheckoutViewController: CheckoutControllerDelegate {
+	
+	func successFetch() {
+		DispatchQueue.main.async {
+			self.tableView.reloadData()
+		}
 	}
 	
 }
