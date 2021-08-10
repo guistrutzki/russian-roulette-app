@@ -28,6 +28,10 @@
 		BC0798DF26BCCBC000FAE3EF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0798DE26BCCBC000FAE3EF /* Alert.swift */; };
 		BC0798E326BCDA9000FAE3EF /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0798E226BCDA9000FAE3EF /* Order.swift */; };
 		BC0798E526BCDB6A00FAE3EF /* CheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0798E426BCDB6A00FAE3EF /* CheckoutController.swift */; };
+		BC32188F26C20A59003A32BF /* HistoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32188E26C20A59003A32BF /* HistoricoViewController.swift */; };
+		BC32189126C20AC9003A32BF /* HistoricoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32189026C20AC9003A32BF /* HistoricoController.swift */; };
+		BC32189326C20B8E003A32BF /* Historic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32189226C20B8E003A32BF /* Historic.swift */; };
+		BC32189526C20C57003A32BF /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32189426C20C57003A32BF /* Extension+Double.swift */; };
 		BC76B98426B37F7800FF036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC76B98326B37F7800FF036B /* Assets.xcassets */; };
 		BC8DF5DA26B3842F000EB12D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5D926B3842F000EB12D /* User.swift */; };
 		BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DF5DD26B38467000EB12D /* UserController.swift */; };
@@ -61,6 +65,10 @@
 		BC0798DE26BCCBC000FAE3EF /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		BC0798E226BCDA9000FAE3EF /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		BC0798E426BCDB6A00FAE3EF /* CheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
+		BC32188E26C20A59003A32BF /* HistoricoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoViewController.swift; sourceTree = "<group>"; };
+		BC32189026C20AC9003A32BF /* HistoricoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoController.swift; sourceTree = "<group>"; };
+		BC32189226C20B8E003A32BF /* Historic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historic.swift; sourceTree = "<group>"; };
+		BC32189426C20C57003A32BF /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
 		BC76B98326B37F7800FF036B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8DF5D926B3842F000EB12D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC8DF5DD26B38467000EB12D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 				5B32AC3B26B368D900504A02 /* ViewController.swift */,
 				703999D726B5FCCC008B9445 /* AlertViewController.swift */,
 				BC0798DE26BCCBC000FAE3EF /* Alert.swift */,
+				BC32188E26C20A59003A32BF /* HistoricoViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 				BCB740FD26BCA6FD001D78D7 /* Account.json */,
 				BCB740FB26BCA6F5001D78D7 /* Historico.json */,
 				703999D226B5EA1C008B9445 /* Constants.swift */,
+				BC32189426C20C57003A32BF /* Extension+Double.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -231,6 +241,7 @@
 			children = (
 				BC8DF5D926B3842F000EB12D /* User.swift */,
 				BC0798E226BCDA9000FAE3EF /* Order.swift */,
+				BC32189226C20B8E003A32BF /* Historic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 			children = (
 				BC8DF5DD26B38467000EB12D /* UserController.swift */,
 				BC0798E426BCDB6A00FAE3EF /* CheckoutController.swift */,
+				BC32189026C20AC9003A32BF /* HistoricoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -355,12 +367,16 @@
 				BC0798E526BCDB6A00FAE3EF /* CheckoutController.swift in Sources */,
 				BC0798DF26BCCBC000FAE3EF /* Alert.swift in Sources */,
 				BC0798E326BCDA9000FAE3EF /* Order.swift in Sources */,
+				BC32189326C20B8E003A32BF /* Historic.swift in Sources */,
 				703999DB26B60E3C008B9445 /* AlertService.swift in Sources */,
 				703999D826B5FCCC008B9445 /* AlertViewController.swift in Sources */,
 				BC8DF5DE26B38467000EB12D /* UserController.swift in Sources */,
+				BC32188F26C20A59003A32BF /* HistoricoViewController.swift in Sources */,
 				5B32AC3826B368D900504A02 /* AppDelegate.swift in Sources */,
 				5B32AC3A26B368D900504A02 /* SceneDelegate.swift in Sources */,
+				BC32189526C20C57003A32BF /* Extension+Double.swift in Sources */,
 				7053328E26BCBE8A0011651F /* ItemOrderCell.swift in Sources */,
+				BC32189126C20AC9003A32BF /* HistoricoController.swift in Sources */,
 				703999D326B5EA1C008B9445 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

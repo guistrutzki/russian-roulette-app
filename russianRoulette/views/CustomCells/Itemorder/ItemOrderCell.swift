@@ -34,4 +34,10 @@ class ItemOrderCell: UITableViewCell {
 		itemFoodImageView.image = UIImage(named: imageName)
 	}
 	
+	func setupCell(image: UIImage?, itemDescription: String, price: String) {
+		itemFoodImageView.image = image
+		itemNameLabel.text = itemDescription
+		itemPriceLabel.text = price
+	}
+	
 }

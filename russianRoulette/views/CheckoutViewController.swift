@@ -46,10 +46,9 @@ class CheckoutViewController: UIViewController {
 					as? ItemOrderCell,
 				let itemOrder = controller.getItemOrder(indexPath: indexPath) else { return UITableViewCell() }
 		
-		let priceString = controller.formatValueNumericToString(value: itemOrder.price)
 		let imageName = controller.getImageName(named: itemOrder.productType)
 		
-		cell.setupCell(item: itemOrder, priceString: priceString, imageName: imageName)
+		cell.setupCell(item: itemOrder, priceString: itemOrder.price.convertCurrentString(), imageName: imageName)
 		
 		return cell
 	}

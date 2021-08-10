@@ -119,14 +119,29 @@
         <!--Histórico-->
         <scene sceneID="3oi-WP-6v7">
             <objects>
-                <viewController id="XFZ-jK-bjK" sceneMemberID="viewController">
+                <viewController id="XFZ-jK-bjK" customClass="HistoricoViewController" customModule="russianRoulette" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p0e-WC-ZVs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-rU-NZn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cy2-CU-BdH"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cy2-CU-BdH" firstAttribute="trailing" secondItem="RBx-rU-NZn" secondAttribute="trailing" id="7UJ-2r-Dza"/>
+                            <constraint firstItem="RBx-rU-NZn" firstAttribute="leading" secondItem="cy2-CU-BdH" secondAttribute="leading" id="9Yh-oR-qQi"/>
+                            <constraint firstItem="cy2-CU-BdH" firstAttribute="bottom" secondItem="RBx-rU-NZn" secondAttribute="bottom" id="B5b-QL-40Y"/>
+                            <constraint firstItem="RBx-rU-NZn" firstAttribute="top" secondItem="cy2-CU-BdH" secondAttribute="top" id="JiH-E9-P1p"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Histórico" image="doc.plaintext" catalog="system" id="nfX-5A-SF4"/>
+                    <connections>
+                        <outlet property="myTableView" destination="RBx-rU-NZn" id="1Kr-mH-C2M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dB6-WA-rS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
