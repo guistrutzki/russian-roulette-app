@@ -34,7 +34,15 @@ class CheckoutController {
 	}
 	
 	func getTotalValue() -> String {
-		return String(format: "%.2f", order?.totalValue ?? 0.0)
+		return String(format: "R$ %.2f", order?.totalValue ?? 0.0)
+	}
+	
+	func formatValueNumericToString(value: Double) -> String {
+		return String(format: "R$ %.2f", value)
+	}
+	
+	func getImageName(named: String) -> String {
+		return named == "BEBIDA" ? "beer" : "food"
 	}
 	
 	func getItemOrder(indexPath: IndexPath) -> ItemOrder? {
